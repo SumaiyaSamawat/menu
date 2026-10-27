@@ -1,0 +1,59 @@
+/* Reset margins and set font style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar container styling */
+.navbar {
+    background-color: #007a78; /* Teal background */
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Align navigation links horizontally and center them */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Space between items */
+}
+
+/* Style the individual link text */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* Default white text for all links */
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative; 
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Create the sliding underline using a pseudo-element */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff3333; /* Red underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover state only: Turns text red and animates the underline when hovered */
+.nav-links a:hover::after, 
+.nav-links a:focus::after {
+    width: 100%;
+}
+
+.nav-links a:hover, 
+.nav-links a:focus {
+    color: #ff3333;
+}
